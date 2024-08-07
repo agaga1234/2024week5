@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <title>index</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+
+    <!-- nav -->
+    <div class="d-flex">
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-light py-3 nav-width vh-100"
+      >
+        <div
+          class="container-fluid flex-column align-items-start p-0 fw-bold h-100"
+        >
+          <div>
+            <a class="navbar-brand p-3" href="#"
+              ><img src="/assets/images/logo-ANSWER.svg" alt="logo"
+            /></a>
+            <ul class="navbar-nav flex-column">
+              <li class="nav-item mb-4">
+                <a class="nav-link border-start" aria-current="page" href="#"
+                  ><span
+                    class="material-symbols-outlined align-bottom me-2 ps-2"
+                  >
+                    insert_chart </span
+                  >Dashboard</a
+                >
+              </li>
+              <li class="nav-item mb-4">
+                <a class="nav-link border-start" aria-current="page" href="#"
+                  ><span
+                    class="material-symbols-outlined align-bottom me-2 ps-2"
+                  >
+                    forum </span
+                  >Question</a
+                >
+              </li>
+              <li class="nav-item mb-4">
+                <a class="nav-link border-start" aria-current="page" href="#"
+                  ><span
+                    class="material-symbols-outlined align-bottom me-2 ps-2"
+                  >
+                    description </span
+                  >Assignment</a
+                >
+              </li>
+              <li class="nav-item mb-4">
+                <a class="nav-link" aria-current="page" href="#"
+                  ><span
+                    class="material-symbols-outlined align-bottom me-2 ps-2"
+                  >
+                    video_library </span
+                  >Course</a
+                >
+              </li>
+              <li class="nav-item mb-4">
+                <a
+                  class="nav-link active border-start border-3 border-success text-success"
+                  aria-current="page"
+                  href="#"
+                  ><span
+                    class="material-symbols-outlined align-bottom me-2 ps-2"
+                  >
+                    group </span
+                  >Admin</a
+                >
+              </li>
+              <li class="nav-item mb-4">
+                <a class="nav-link border-start" aria-current="page" href="#"
+                  ><span
+                    class="material-symbols-outlined align-bottom me-2 ps-2"
+                  >
+                    settings </span
+                  >Settings</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="d-flex px-2">
+            <div class="flex-shrink-0">
+              <img
+                class="rounded-circle object-fit-cover"
+                src="/assets/images/andychen.jpeg"
+                alt="andychen"
+                width="48"
+                height="48"
+              />
+            </div>
+            <div class="flex-grow-1 ms-3">
+              <p>Andy Chenandy</p>
+              <a href="mailto:andy0401@mail.com" style="font-size: 14px"
+                >andy0401@mail.com</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- list-top -->
+      <div class="d-flex flex-column fulwidth me-32 ms-32">
+        <div class="adminname d-flex my-32 align-items-center bd-highlight">
+          <h2 class="admintitle me-5 fs-4 fw-bolder">Admin</h2>
+
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn me-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            <span
+              class="material-symbols-outlined align-bottom fw-bold text-success"
+            >
+              Add
+            </span>
+            Add New Admin
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content rounded-0">
+                <div class="modal-header border-0 pt-32 py-32">
+                  <h5 class="modal-title fs-4 fw-bold" id="exampleModalLabel">
+                    New Admin
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body pt-32 py-32">
+                  <p class="fs-5 fw-bold">Account</p>
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label fs-7"
+                      >Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control rounded-1 py-3"
+                      id="formGroupExampleInput"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label fs-7"
+                      >Email</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control rounded-1 py-3 mb-3"
+                      id="formGroupExampleInput2"
+                    />
+                  </div>
+                  <hr />
+                  <p class="fs-5 fw-bold mb-20">Verification</p>
+                  <div class="mb-20">
+                    <p class="fs-6 fw-bold">
+                      <span
+                        class="material-symbols-outlined align-bottom text-danger me-9"
+                      >
+                        warning </span
+                      >Unverified
+                    </p>
+                  </div>
+                  <button
+                    class="btn btn-outline-success w-100 border-secondary rounded-1 mb-20 fw-bold py-3"
+                    type="button"
+                  >
+                    Send Verification Mail
+                  </button>
+                  <hr />
+                  <p class="fs-5 fw-bold mb-20">Access Level</p>
+                  <select
+                    class="form-select py-3 text-secondary"
+                    aria-label="Default select example"
+                  >
+                    <option selected>-Choose access level-</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                  <hr />
+                </div>
+
+                <div class="modal-footer py-32">
+                  <button
+                    type="button"
+                    class="btn btn-outline-success rounded-1 py-32"
+                    data-bs-dismiss="modal"
+                  >
+                    Cancel
+                  </button>
+                  <button type="button" class="btn btn-success rounded-1 py-32">
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="adminimg">
+            <span class="material-symbols-outlined align-bottom me-2 ps-2">
+              search
+            </span>
+            <span class="material-symbols-outlined align-bottom me-2 ps-2">
+              notifications_active
+            </span>
+          </div>
+        </div>
+
+        <!-- list-right-table -->
+        <div>
+          <table class="table">
+            <thead class="fw-bold">
+              <tr>
+                <th scope="col">
+                  ID<span
+                    class="material-symbols-outlined align-bottom text-success"
+                  >
+                    arrow_downward
+                  </span>
+                </th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Verified</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody class="Normal weight text align-bottom">
+              <tr>
+                <th scope="row">#1</th>
+                <td>Emir Wicks</td>
+                <td>emir.wicks@mail.com</td>
+                <td>Yes</td>
+                <td class="d-flex justify-content-end">
+                  <span class="material-symbols-outlined me-4 align-bottom">
+                    visibility
+                  </span>
+                  <span
+                    class="material-symbols-outlined align-bottom text-success"
+                  >
+                    edit
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">#2</th>
+                <td>Zaina Goldsmith</td>
+                <td>zaina.goldsmith@mail.com</td>
+                <td>Yes</td>
+                <td class="d-flex justify-content-end">
+                  <span class="material-symbols-outlined me-4 align-bottom">
+                    visibility
+                  </span>
+                  <span class="material-symbols-outlined align-bottom">
+                    edit
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">#3</th>
+                <td>Mahima Lopez</td>
+                <td>mahima.lopez@mail.com</td>
+                <td>Yes</td>
+                <td class="d-flex justify-content-end">
+                  <span class="material-symbols-outlined me-4 align-bottom">
+                    visibility
+                  </span>
+                  <span class="material-symbols-outlined align-bottom">
+                    edit
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">#4</th>
+                <td>Pharrell Murray</td>
+                <td>pharrell.murray@mail.com</td>
+                <td>Yes</td>
+                <td class="d-flex justify-content-end">
+                  <span class="material-symbols-outlined me-4 align-bottom">
+                    visibility
+                  </span>
+                  <span class="material-symbols-outlined align-bottom">
+                    edit
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">#5</th>
+                <td>Annika Mcbride</td>
+                <td>annika.mcbride@mail.com</td>
+                <td>Yes</td>
+                <td class="d-flex justify-content-end">
+                  <span class="material-symbols-outlined me-4 align-bottom">
+                    visibility
+                  </span>
+                  <span class="material-symbols-outlined align-bottom">
+                    edit
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">#6</th>
+                <td>Fatimah Clark</td>
+                <td>fatimah.clark@mail.com</td>
+                <td>Yes</td>
+                <td class="d-flex justify-content-end">
+                  <span class="material-symbols-outlined me-4 align-bottom">
+                    visibility
+                  </span>
+                  <span class="material-symbols-outlined align-bottom">
+                    edit
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">#7</th>
+                <td>Klaudia Rhodes</td>
+                <td>klaudia.rhodes@mail.com</td>
+                <td>Yes</td>
+                <td class="d-flex justify-content-end">
+                  <span class="material-symbols-outlined me-4 align-bottom">
+                    visibility
+                  </span>
+                  <span class="material-symbols-outlined align-bottom">
+                    edit
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">#8</th>
+                <td>Tillie Lucero</td>
+                <td>tillie.lucero@mail.com</td>
+                <td>Yes</td>
+                <td class="d-flex justify-content-end">
+                  <span class="material-symbols-outlined me-4 align-bottom">
+                    visibility
+                  </span>
+                  <span class="material-symbols-outlined align-bottom">
+                    edit
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">#9</th>
+                <td>Sabrina Stephenson</td>
+                <td>sabrina.stephenson@mail.com</td>
+                <td>Yes</td>
+                <td class="d-flex justify-content-end">
+                  <span class="material-symbols-outlined me-4">
+                    visibility
+                  </span>
+                  <span class="material-symbols-outlined"> edit </span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">#10</th>
+                <td>Annie Smith</td>
+                <td>annie.smith@mail.com</td>
+                <td>Yes</td>
+                <td class="d-flex justify-content-end">
+                  <span class="material-symbols-outlined me-4 align-bottom">
+                    visibility
+                  </span>
+                  <span class="material-symbols-outlined align-bottom">
+                    edit
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- page -->
+        <nav aria-label="Page navigation example">
+          <ul class="pagination mt-63">
+            <li class="page-item ms-auto">
+              <a
+                class="page-link border-success text-success"
+                href="#"
+                aria-label="Previous"
+              >
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item">
+              <a
+                class="page-link border-success text-white active fw-bold"
+                href="#"
+                >1</a
+              >
+            </li>
+            <li class="page-item">
+              <a class="page-link border-success text-dark fw-bold" href="#"
+                >2</a
+              >
+            </li>
+            <li class="page-item">
+              <a class="page-link border-success text-dark fw-bold" href="#"
+                >3</a
+              >
+            </li>
+            <li class="page-item">
+              <a
+                class="page-link border-success text-success"
+                href="#"
+                aria-label="Next"
+              >
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <script type="module" src="../main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
